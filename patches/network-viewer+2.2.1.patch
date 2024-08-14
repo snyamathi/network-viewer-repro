@@ -1,0 +1,21 @@
+diff --git a/node_modules/network-viewer/lib/index.js b/node_modules/network-viewer/lib/index.js
+index d70b576..5526fa8 100644
+--- a/node_modules/network-viewer/lib/index.js
++++ b/node_modules/network-viewer/lib/index.js
+@@ -2576,12 +2576,11 @@ var NetworkTableContainer = function NetworkTableContainer() {
+     _useState2 = _slicedToArray(_useState, 2),
+     tableBodyHeight = _useState2[0],
+     setTableBodyHeight = _useState2[1];
+-  var ref = React.useRef(null);
+-  React.useEffect(function () {
+-    if (ref !== null && ref !== void 0 && ref.current) {
+-      setTableBodyHeight(ref.current.clientHeight - TABLE_HEADER_HEIGHT);
++  var ref = React.useCallback(function (node) {
++    if (node !== null) {
++      setTableBodyHeight(node.clientHeight - TABLE_HEADER_HEIGHT);
+     }
+-  }, [ref]);
++  }, [actualData]);
+   if (error) {
+     return /*#__PURE__*/React__default["default"].createElement(ErrorMessage, error);
+   }

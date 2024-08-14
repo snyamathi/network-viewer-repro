@@ -1,0 +1,16 @@
+{
+  "name": "repro",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "postinstall": "patch-package",
+    "start": "next start"
+  },
+  "dependencies": {
+    "har-examples": "3.1.1",
+    "network-viewer": "2.2.1",
+    "network-viewer-unpatched": "npm:network-viewer@2.2.1",
+    "next": "14.2.5",
+    "patch-package": "8.0.0"
+  }
+}
