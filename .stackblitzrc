@@ -1,0 +1,6 @@
+{
+  "startCommand": "npm run build && npm start",
+  "env": {
+    "npm_config_force": "1"
+  }
+}
